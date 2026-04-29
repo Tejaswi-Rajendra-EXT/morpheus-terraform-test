@@ -9,6 +9,6 @@ terraform {
 provider "local" {}
 
 resource "local_file" "test" {
-  content  = "Hello from Morpheus Terraform"
-  filename = "/tmp/morpheus_tf_test.txt"
+  content  = var.file_content
+  filename = var.file_name
 }
